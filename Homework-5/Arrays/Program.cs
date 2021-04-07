@@ -10,7 +10,7 @@ namespace Arrays
             string[] customernames = new string[1000];
 
 
-            double[] accountbalances = new double[1000];
+            double[] AccountBalances = new double[1000];
 
             string[] namelines = File.ReadAllLines("CustomerNames.csv");
             string[] balancesLines = File.ReadAllLines("AccountBalances.csv");
@@ -26,7 +26,7 @@ namespace Arrays
 
                 string balance = balancesLines[i];
                 balance = balance.Replace("$", "");
-                accountbalances[i - 1] = Convert.ToDouble(balance);
+                AccountBalances[i - 1] = Convert.ToDouble(balance);
 
             }
 
@@ -44,7 +44,7 @@ namespace Arrays
             {
                 if (answer.ToLower() == customernames[i].ToLower())
                 {
-                    Console.WriteLine($"{answer} has a balance of {accountbalances[i].ToString("C")}");
+                    Console.WriteLine($"{answer} has a balance of {AccountBalances[i].ToString("C")}");
                 }
             }
         }

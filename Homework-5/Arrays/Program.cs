@@ -12,8 +12,8 @@ namespace Arrays
 
             double[] accountbalances = new double[1000];
 
-            string[] namelines = File.ReadAllLines("CustomerNames.CSV");
-            string[] balancesLines = File.ReadAllLines("AccountBalances.CSV");
+            string[] namelines = File.ReadAllLines("CustomerNames.csv");
+            string[] balancesLines = File.ReadAllLines("AccountBalances.csv");
 
             for (int i = 1; i < namelines.Length; i++)
             {
